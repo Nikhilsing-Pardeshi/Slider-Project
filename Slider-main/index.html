@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">FUN</a>
+        <ul class="nav">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">LogIn</a></li>
+            <li><a href="#">LogOut</a></li>
+        </ul>  
+        <div class="search">
+            <input type="text" placeholder="Search"/>
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="content active">
+            <img src="design.png" alt="" class="design"/>
+            <h4>
+                <span>2025</span><span><i>11hr+</i></span><span>204</span><span>Animation</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere blanditiis reprehenderit, porro labore iure repudiandae incidunt, quaerat in inventore pariatur ex nostrum beatae temporibus nemo magni voluptatum.</p>
+            <div class="button">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>View</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>More</a>
+            </div>
+        </div>
+        <div class="carousel-box">
+            <div class="carousel">
+                <div class="carousel-item active" onclick="changeBg('1.jpg', '1')">
+                    <img src="./Images/one.jpg" alt="" onclick="changeBg('2.jpg', '2')">
+                </div>
+                <div class="carousel-item active">
+                    <img src="./Images/two.jpg" alt="" onclick="changeBg('3.jpg', '3')">
+                </div>
+                <div class="carousel-item active">
+                    <img src="./Images/three.jpg" alt="" onclick="changeBg('4.jpg', '4')">
+                </div>
+                <div class="carousel-item active">
+                    <img src="./Images/four.jpg" alt="" onclick="changeBg('5.jpg', '5')">
+                </div>
+                <div class="carousel-item active">
+                    <img src="./Images/five.jpg" alt="" onclick="changeBg('6.jpg', '6')">
+                </div>
+                <div class="carousel-item active">
+                    <img src="./Images/six.jpg" alt="" onclick="changeBg('2.jpg', '2')">
+                </div>
+            </div>
+        </div>
+            <a href="#" class="play" onclick="video();"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Intro</a>
+            <ul class="sci">
+                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            </ul>
+    </div>
+    <div class="trailer active">
+        <video src="./Video/video.mp4" muted controls="true" autoplay="true"></video>
+        <img src="./Images/close.png" alt="" class="close" onclick="video();"/>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    M.Carousel.init(elems, {
+        fullWidth:true,
+        indicators: true
+    });
+  });
+         $(document).ready(function(){
+            $('.carousel').carousel();
+        });
+    </script>
+</body>
+</html>
